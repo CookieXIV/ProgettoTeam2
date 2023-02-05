@@ -2,16 +2,26 @@ package CoffeeBooks;
 
 public class Book {
 
-    String title;
-    String author;
+    String titolo;
+    String autore;
     String code;
-    int cost;
+    double prezzo;
 
-    public Book(String title,String author, String code, int cost) {
-        this.title = title;
-        this.author = author;
+    @Override
+    public String toString() {
+        return "Book{" +
+                "title='" + titolo + '\'' +
+                ", author='" + autore + '\'' +
+                ", code='" + code + '\'' +
+                ", cost=" + prezzo +
+                '}';
+    }
+
+    public Book(String titolo, String autore, String code, double prezzo) {
+        this.titolo = titolo;
+        this.autore = autore;
         this.code = code;
-        this.cost = cost;
+        this.prezzo = prezzo;
     }
 
 
