@@ -1,11 +1,21 @@
 package org.example;
 
+import java.util.Objects;
+
 public class Book {
     String title;
     String author;
     String barcode;
     int quantity;
     double price;
+
+    public Book(String title, String author, String barcode, int quantity, double price){
+        this.title = title;
+        this.author = author;
+        this.barcode = barcode;
+        this.quantity = quantity;
+        this.price = price;
+    }
 
     @Override
     public String toString() {
@@ -16,6 +26,18 @@ public class Book {
                 ", Quantity=" + quantity +
                 ", Price=" + price +
                 '}';
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (!(o instanceof Book book)) return false;
+        return quantity == book.quantity && Double.compare(book.price, price) == 0 && Objects.equals(title, book.title) && Objects.equals(author, book.author) && Objects.equals(barcode, book.barcode);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(title, author, barcode, quantity, price);
     }
 
     public String getTitle() {
