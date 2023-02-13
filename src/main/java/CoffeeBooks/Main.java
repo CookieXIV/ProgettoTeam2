@@ -54,41 +54,41 @@ public class Main {
         Biblioteca biblioteca = new Biblioteca();
 
         Autore autore1 = new Autore("Stephen King");
-        autore1.addBook(new Book("It","Stephen King"," ",19.29));
-        autore1.addBook(new Book("Shining","Stephen King"," ",14.45));
-        autore1.addBook(new Book("Misery","Stephen King"," ",16.50));
-        autore1.addBook(new Book("Il miglio verde","Stephen King"," ",21.0));
+        autore1.addBook(new Book("It","Stephen King"," ",19.29,7));
+        autore1.addBook(new Book("Shining","Stephen King"," ",14.45,6));
+        autore1.addBook(new Book("Misery","Stephen King"," ",16.50,7));
+        autore1.addBook(new Book("Il miglio verde","Stephen King"," ",21.0,3));
 
         Autore autore2 = new Autore("JRR Martin");
-        autore2.addBook(new Book("Il Signore degli Anelli","J.R.R. Martin","#",26.00));
-        autore2.addBook(new Book("Le due torri","J.R.R. Martin","#",25.45));
-        autore2.addBook(new Book("Il ritorno del Re","J.R.R. Martin","#",26.00));
-        autore2.addBook(new Book("Il Silmarillion","J.R.R. Martin","#",45.00));
+        autore2.addBook(new Book("Il Signore degli Anelli","J.R.R. Martin","#",26.00,5));
+        autore2.addBook(new Book("Le due torri","J.R.R. Martin","#",25.45,7));
+        autore2.addBook(new Book("Il ritorno del Re","J.R.R. Martin","#",26.00,8));
+        autore2.addBook(new Book("Il Silmarillion","J.R.R. Martin","#",45.00,2));
 
         Autore autore3 = new Autore("Ernest Hemingway");
-        autore3.addBook(new Book("Il Vecchio e il Mare","Ernest Hemingway","#",6.58));
-        autore3.addBook(new Book("Per chi suona la campana","Ernest Hemingway","#",7.20));
-        autore3.addBook(new Book("Addio alle Armi","Ernest Hemingway","#",7.00));
-        autore3.addBook(new Book("Festa mobile","Ernest Hemingway","#",6.30));
+        autore3.addBook(new Book("Il Vecchio e il Mare","Ernest Hemingway","#",6.58,2));
+        autore3.addBook(new Book("Per chi suona la campana","Ernest Hemingway","#",7.20,6));
+        autore3.addBook(new Book("Addio alle Armi","Ernest Hemingway","#",7.00,9));
+        autore3.addBook(new Book("Festa mobile","Ernest Hemingway","#",6.30,7));
 
         Autore autore4 = new Autore("Virginia Woolf");
-        autore4.addBook(new Book("La Signora Dalloway","Virginia Woolf","#",8.94));
-        autore4.addBook(new Book("Una ttanza tutta per sé","Virginia Woolf","#",7.50));
-        autore4.addBook(new Book("Gita al faro","Virginia Woolf","#",8.94));
-        autore4.addBook(new Book("Orlando","Virginia Woolf","#",9.49));
+        autore4.addBook(new Book("La Signora Dalloway","Virginia Woolf","#",8.94,5));
+        autore4.addBook(new Book("Una stanza tutta per sé","Virginia Woolf","#",7.50,8));
+        autore4.addBook(new Book("Gita al faro","Virginia Woolf","#",8.94,8));
+        autore4.addBook(new Book("Orlando","Virginia Woolf","#",9.49,2));
 
         Autore autore5 = new Autore("H.P. Lovecraft");
-        autore5.addBook(new Book("Il richiamo di Cthulhu","H.P. Lovecraft","#",20.00));
-        autore5.addBook(new Book("Alle montagne della follia","H.P. Lovecraft","#",12.00));
-        autore5.addBook(new Book("Il Necronomicon","H.P. Lovecraft","#",24.70));
-        autore5.addBook(new Book("I gatti i Ulthar","H.P. Lovecraft","#",12.90));
-        autore5.addBook(new Book("Il Culto Segreto","H.P. Lovecraft","#",15.20));
+        autore5.addBook(new Book("Il richiamo di Cthulhu","H.P. Lovecraft","#",20.00,2));
+        autore5.addBook(new Book("Alle montagne della follia","H.P. Lovecraft","#",12.00,8));
+        autore5.addBook(new Book("Il Necronomicon","H.P. Lovecraft","#",24.70,6));
+        autore5.addBook(new Book("I gatti i Ulthar","H.P. Lovecraft","#",12.90,5));
+        autore5.addBook(new Book("Il Culto Segreto","H.P. Lovecraft","#",15.20,6));
 
         Autore autore6 = new Autore("Dan Brown");
-        autore6.addBook(new Book("Il codice da Vinci","Dan Brown","#",7.99));
-        autore6.addBook(new Book("Angeli e Demoni","Dan Brown","#",11.99));
-        autore6.addBook(new Book("Inferno","Dan Brown","#",10.90));
-        autore6.addBook(new Book("Origin","Dan Brown","#",14.25));
+        autore6.addBook(new Book("Il codice da Vinci","Dan Brown","#",7.99,5));
+        autore6.addBook(new Book("Angeli e Demoni","Dan Brown","#",11.99,2));
+        autore6.addBook(new Book("Inferno","Dan Brown","#",10.90,5));
+        autore6.addBook(new Book("Origin","Dan Brown","#",14.25,8));
 
 
 
@@ -100,7 +100,14 @@ public class Main {
         biblioteca.addAutore(autore6);
 
     while (true) {
-        System.out.println("Abbiamo i seguenti autori: "+ autore1.name + " - " + autore2.name + " - " + autore3.name + " - " + autore4.name + " - " + autore5.name + " - " + autore6.name);
+        System.out.println("Abbiamo i seguenti autori: "
+                + autore1.name
+                + " - " + autore2.name
+                + " - " + autore3.name
+                + " - " + autore4.name
+                + " - " + autore5.name
+                + " - " + autore6.name);
+        
         System.out.print("Inserisci il nome dell'autore da cercare: ");
         String nomeAutore = s.nextLine();
 
@@ -109,7 +116,10 @@ public class Main {
             System.out.println("Nessun libro trovato per l'autore " + nomeAutore);
         } else {
             for (Book libro : libri) {
-                System.out.println(libro.autore + " - " + libro.titolo + " - " + libro.prezzo + "€");
+                System.out.println(libro.autore + " - " + libro.titolo + " - " + libro.prezzo + "€, Q: " + libro.quantità);
+                if (libro.quantità < 4) {
+                    System.out.println("---- ATTENZIONE ---- Rimangono pochi volume del seguente libro: ---> " + libro.titolo  + " <---:");
+                }
             }
         }
     }

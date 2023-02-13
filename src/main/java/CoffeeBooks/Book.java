@@ -6,6 +6,7 @@ public class Book {
     String autore;
     String code;
     double prezzo;
+    int quantità;
 
     @Override
     public String toString() {
@@ -14,15 +15,18 @@ public class Book {
                 ", author='" + autore + '\'' +
                 ", code='" + code + '\'' +
                 ", cost=" + prezzo +
+                ", in possesso=" + quantità +'\''+
                 '}';
     }
 
-    public Book(String titolo, String autore, String code, double prezzo) {
+    public Book(String titolo, String autore, String code, double prezzo, int quantità) {
         this.titolo = titolo;
         this.autore = autore;
         this.code = code;
         this.prezzo = prezzo;
+        this.quantità = quantità;
     }
+
 
 
 
