@@ -1,5 +1,7 @@
 package org.example;
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.concurrent.ArrayBlockingQueue;
 
 public class Main {
     public static void main(String[] args) {
@@ -22,6 +24,11 @@ public class Main {
         authors.add(a4);
 
         System.out.println(authors);
+
+        a1.addBook(new Book("It", "Stephen King", "#",1,19.99));
+        a1.addBook(new Book("Shining", "Stephen King", "#", 1, 19.99));
+        a1.addBook(new Book("Misery","Stephen King","#",1, 16.50));
+        a1.addBook(new Book("Il miglio verde","Stephen King","#",1,21.0));
 
         a1.getAuthor();
 
