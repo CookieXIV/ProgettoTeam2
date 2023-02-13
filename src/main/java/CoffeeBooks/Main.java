@@ -91,7 +91,6 @@ public class Main {
         autore6.addBook(new Book("Origin","Dan Brown","#",14.25,8));
 
 
-
         biblioteca.addAutore(autore1);
         biblioteca.addAutore(autore2);
         biblioteca.addAutore(autore3);

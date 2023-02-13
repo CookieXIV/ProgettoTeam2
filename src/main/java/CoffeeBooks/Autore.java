@@ -17,11 +17,10 @@ public class Autore {
     public void addBook(Book book) {
        books.add(book);
     }
-    
-    
 
-
-
+    public String getBooks() {
+        return name+" E questi sono i suoi libri: " + books;
+    }
 
     /*
     public void getBooks() {

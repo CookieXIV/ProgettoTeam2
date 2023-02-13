@@ -25,4 +25,13 @@ public class Biblioteca {
         return libri;
     }
 
+    public void setAutori(List<Autore> autori) {
+        this.autori = autori;
+    }
+
+    public List<Autore> getAutori() {
+        return autori;
+    }
+
+
 }
